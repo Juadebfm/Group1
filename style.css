@@ -301,7 +301,7 @@ footer .footer_float {
   margin-bottom: 1rem;
 }
 
-.footer_float p {
+.footer_float > p {
   margin-bottom: 2rem;
 }
 
@@ -309,9 +309,73 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  margin: 0;
   gap: 1rem;
 }
 
+form p {
+  /* display: block; */
+  width: 100%;
+  position: relative;
+}
+
+form button {
+  width: 40%;
+  padding: 0.9rem 1rem !important;
+  cursor: pointer;
+}
+
+form p label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+form p label input[type="email"] {
+  appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  position: absolute;
+  bottom: -50%;
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  font-weight: 700;
+  color: #900;
+  background-color: transparent;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
 .footer_float button.btn {
   padding: 0.9rem 2rem;
 }
@@ -388,8 +452,15 @@ footer .main_footer {
   margin-right: 0.8rem;
   border-radius: 50%;
   font-size: 20px;
-  border: 1px solid var(--main-light-clr);
+  box-shadow: 0 0 2px 0 var(--main-light-clr);
   padding: 8px;
+  transition: 0.3s ease;
 }
 
+.socials i:hover {
+  cursor: pointer;
+  border: none;
+  color: var(--CTA-icons-bg);
+  box-shadow: 0 0 2px 1px var(--CTA-icons-bg);
+}
 /* FOOTER SECTION */

@@ -172,8 +172,19 @@
           extremely generous, if you have any questions, our support team would
           be happy to help you
         </p>
-        <form>
-          <input type="text" />
+        <form novalidate>
+          <p>
+            <label for="mail">
+              <input
+                type="email"
+                id="mail"
+                name="mail"
+                required
+                minlength="8"
+              />
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </p>
           <button class="btn">Get Started For Free</button>
         </form>
       </div>
@@ -219,5 +230,7 @@
       </div>
     </footer>
     <!-- FOOTER SECTION -->
+    <!-- JS -->
+    <script src="/index.js"></script>
   </body>
 </html>
